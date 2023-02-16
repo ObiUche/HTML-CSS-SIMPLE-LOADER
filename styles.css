@@ -1,0 +1,88 @@
+*,*::after, *::before{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#base {
+  background-color: white;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.box {
+  height: 10px;
+  width: 100px;
+  /* border: 2px solid black; */
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+
+}
+
+.bar {
+  display: inline-block;
+  height: 10px;
+  width: 50px;
+  background-color: black;
+  position: absolute;
+}
+
+
+.boxOne {
+  top: 50px;
+}
+
+.boxTwo {
+  top: 90px;
+}
+
+.boxThree {
+  transform: rotateZ(90deg);
+  left: 5px;
+}
+
+.boxFour {
+  transform: rotateZ(90deg);
+  left: 45px; 
+}
+
+
+@keyframes slideOne{
+  from {
+    transform: translateX(-75px);
+  }
+  to{
+    transform: translateX(75px);
+  }
+}
+.barOne, .barThree{
+  animation: slideOne 2s linear infinite;
+}
+
+
+@keyframes slideTwo{
+  from{
+    transform: translateX(75px);
+  }
+  to{
+    transform: translateX(-75px);
+  }
+}
+.barTwo, .barFour{
+  animation: slideTwo 2s linear infinite;
+}
